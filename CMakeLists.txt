@@ -1,15 +1,20 @@
 cmake_minimum_required(VERSION 3.10)
 set(CMAKE_CONFIGURATION_TYPES Debug Release)
 
-project(CEF3SimpleSample 
-    VERSION 1.0
+project(CEF3App
     DESCRIPTION "Crossplatform CEF GUI project"
     LANGUAGES CXX C) # C needed for CEF
 
+IF ( NOT CMAKE_BUILD_TYPE )
+    SET ( CMAKE_BUILD_TYPE Release CACHE STRING "Choose the type of build, options are: None Debug Release RelWithDebInfo MinSizeRel." FORCE )
+ENDIF ()
+
+INCLUDE (cmake/version.cmake) # get the version number
+
 message("Build type: ${CMAKE_BUILD_TYPE}")
 
-set(APP_NAME "CEF3 Simple Sample")
-set(APP_FOLDER_NAME "CEF3SimpleSample")
+set(APP_NAME "CEF3 App")
+set(APP_FOLDER_NAME "CEF3App")
 
 # Use folders in the resulting project files.
 set_property(GLOBAL PROPERTY OS_FOLDERS ON)

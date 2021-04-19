@@ -2,35 +2,35 @@
 /build/
 
 ### Heavy CEF libs
-/CEF3SimpleSample/CEF/arm/Linux/include/*
-/CEF3SimpleSample/CEF/arm/Linux/libcef_dll/*
-/CEF3SimpleSample/CEF/arm/Linux/Release/*
-/CEF3SimpleSample/CEF/arm/Linux/Resources/*
+/CEF3App/CEF/arm/Linux/include/*
+/CEF3App/CEF/arm/Linux/libcef_dll/*
+/CEF3App/CEF/arm/Linux/Release/*
+/CEF3App/CEF/arm/Linux/Resources/*
 
-/CEF3SimpleSample/CEF/arm/Win/include/*
-/CEF3SimpleSample/CEF/arm/Win/libcef_dll/*
-/CEF3SimpleSample/CEF/arm/Win/Release/*
-/CEF3SimpleSample/CEF/arm/Win/Resources/*
+/CEF3App/CEF/arm/Win/include/*
+/CEF3App/CEF/arm/Win/libcef_dll/*
+/CEF3App/CEF/arm/Win/Release/*
+/CEF3App/CEF/arm/Win/Resources/*
 
-/CEF3SimpleSample/CEF/arm/Mac/include/*
-/CEF3SimpleSample/CEF/arm/Mac/libcef_dll/*
-/CEF3SimpleSample/CEF/arm/Mac/Release/*
-/CEF3SimpleSample/CEF/arm/Mac/Resources/*
+/CEF3App/CEF/arm/Mac/include/*
+/CEF3App/CEF/arm/Mac/libcef_dll/*
+/CEF3App/CEF/arm/Mac/Release/*
+/CEF3App/CEF/arm/Mac/Resources/*
 
-/CEF3SimpleSample/CEF/x86/Linux/include/*
-/CEF3SimpleSample/CEF/x86/Linux/libcef_dll/*
-/CEF3SimpleSample/CEF/x86/Linux/Release/*
-/CEF3SimpleSample/CEF/x86/Linux/Resources/*
+/CEF3App/CEF/x86/Linux/include/*
+/CEF3App/CEF/x86/Linux/libcef_dll/*
+/CEF3App/CEF/x86/Linux/Release/*
+/CEF3App/CEF/x86/Linux/Resources/*
 
-/CEF3SimpleSample/CEF/x86/Win/include/*
-/CEF3SimpleSample/CEF/x86/Win/libcef_dll/*
-/CEF3SimpleSample/CEF/x86/Win/Release/*
-/CEF3SimpleSample/CEF/x86/Win/Resources/*
+/CEF3App/CEF/x86/Win/include/*
+/CEF3App/CEF/x86/Win/libcef_dll/*
+/CEF3App/CEF/x86/Win/Release/*
+/CEF3App/CEF/x86/Win/Resources/*
 
-/CEF3SimpleSample/CEF/x86/Mac/include/*
-/CEF3SimpleSample/CEF/x86/Mac/libcef_dll/*
-/CEF3SimpleSample/CEF/x86/Mac/Release/*
-/CEF3SimpleSample/CEF/x86/Mac/Resources/*
+/CEF3App/CEF/x86/Mac/include/*
+/CEF3App/CEF/x86/Mac/libcef_dll/*
+/CEF3App/CEF/x86/Mac/Release/*
+/CEF3App/CEF/x86/Mac/Resources/*
 !.gitkeep
 
 ### Log
