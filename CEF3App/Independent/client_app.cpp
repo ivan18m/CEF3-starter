@@ -8,6 +8,7 @@
 #include "include/views/cef_window.h"
 #include "include/wrapper/cef_helpers.h"
 #include "client_handler.h"
+#include "util.h"
 
 namespace 
 {
@@ -109,8 +110,10 @@ void ClientApp::OnContextInitialized()
     // Check if a "--url=" value was provided via the command-line. If so, use
     // that instead of the default URL.
     url = command_line->GetSwitchValue("url");
-    if (url.empty())
-        url = "http://www.google.com";
+    if (url.empty()) {
+        // url = "http://www.google.com";
+        url = "file://" + cef_util::GetAppPath() + "/assets/web/index.html"; 
+    }
 
     if (use_views && !enable_chrome_runtime) 
     {

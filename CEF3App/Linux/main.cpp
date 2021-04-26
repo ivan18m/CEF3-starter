@@ -4,6 +4,9 @@
 
 #include "client_app.h"
 
+#include <string>
+#include <unistd.h>
+
 #if defined(CEF_X11)
 #include <X11/Xlib.h>
 #endif
@@ -68,7 +71,7 @@ int main(int argc, char* argv[])
         // Enable experimental Chrome runtime. See issue #2969 for details.
         settings.chrome_runtime = true;
     }
-
+    
     // When generating projects with CMake the CEF_USE_SANDBOX value will be defined
     // automatically. Pass -DUSE_SANDBOX=OFF to the CMake command-line to disable
     // use of the sandbox.

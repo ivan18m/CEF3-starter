@@ -2,16 +2,17 @@ cmake_minimum_required(VERSION 3.10)
 set(CMAKE_CONFIGURATION_TYPES Debug Release)
 
 project(CEF3App
-    DESCRIPTION "Crossplatform CEF GUI project"
-    LANGUAGES CXX C) # C needed for CEF
+        DESCRIPTION "Crossplatform CEF GUI project"
+        LANGUAGES CXX C) # C needed for CEF
+
+set(CXX_STANDARD 17)
 
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release CACHE STRING "Choose the type of build, options are: None Debug Release RelWithDebInfo MinSizeRel." FORCE )
 endif()
+message("Build type: ${CMAKE_BUILD_TYPE}")
 
 INCLUDE(cmake/version.cmake) # get the version number
-
-message("Build type: ${CMAKE_BUILD_TYPE}")
 
 set(APP_NAME "CEF3 App")
 set(APP_FOLDER_NAME "CEF3App")
@@ -194,7 +195,7 @@ elseif(WIN32)
         "${CMAKE_CURRENT_SOURCE_DIR}/${APP_FOLDER_NAME}/Win/client_handler_win.cpp")
     
     # Executable target.
-    add_executable(MainExecutable WIN32 ${CEFCLIENT_SRCS})
+    add_executable(MainExecutable WIN32 ${CEFCLIENT_SRCS}) #target is called MainExecutable
     # target_include_directories(MainExecutable PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/${APP_FOLDER_NAME}/Independent") # can #include .h from independant
     add_dependencies(MainExecutable libcef_dll_wrapper)
     SET_EXECUTABLE_TARGET_PROPERTIES(MainExecutable)
