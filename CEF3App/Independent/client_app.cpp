@@ -105,15 +105,20 @@ void ClientApp::OnContextInitialized()
     // Specify CEF browser settings here.
     CefBrowserSettings browser_settings;
 
-    std::string url;
-
     // Check if a "--url=" value was provided via the command-line. If so, use
     // that instead of the default URL.
-    url = command_line->GetSwitchValue("url");
-    if (url.empty()) {
-        // url = "http://www.google.com";
-        url = "file://" + cef_util::GetAppPath() + "/assets/web/index.html"; 
-    }
+    const std::string url = [&command_line]{
+        if(command_line->GetSwitchValue("url").empty())
+            return "file://" + cef_util::GetAppPath() + "/assets/web/index.html";
+        else
+            return (std::string) command_line->GetSwitchValue("url");
+    }();
+
+    // std::string url;
+    // url = command_line->GetSwitchValue("url");
+    // if (url.empty()) {
+    //     url = "file://" + cef_util::GetAppPath() + "/assets/web/index.html"; 
+    // }
 
     if (use_views && !enable_chrome_runtime) 
     {

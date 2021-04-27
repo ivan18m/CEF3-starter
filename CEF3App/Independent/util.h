@@ -13,7 +13,7 @@ namespace cef_util
     std::string GetAppPath()
     {
         std::string path = "";
-        pid_t pid = getpid();
+        const pid_t pid = getpid();
         char buf[20] = {0};
 
         sprintf(buf, "%d", pid);
@@ -21,12 +21,12 @@ namespace cef_util
         _link.append(buf);
         _link.append("/exe");
         char proc[512];
-        int ch = readlink(_link.c_str(), proc, 512);
+        const int ch = readlink(_link.c_str(), proc, 512);
         if (ch != -1) 
         {
             proc[ch] = 0;
             path = proc;
-            std::string::size_type t = path.find_last_of("/");
+            const std::string::size_type t = path.find_last_of("/");
             path = path.substr(0, t);
         }
 

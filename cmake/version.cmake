@@ -9,6 +9,7 @@ set(VER_MINOR  ${CMAKE_MATCH_2})
 set(VER_PATCH  ${CMAKE_MATCH_3})
 set(VER_COMMIT ${CMAKE_MATCH_4})
 set(VERSION ${VER_MAJOR}.${VER_MINOR}.${VER_PATCH}-${VER_COMMIT})
+set(VERSION_NO_COMMIT ${VER_MAJOR}.${VER_MINOR}.${VER_PATCH})
 message("Building version: ${VERSION}")
 
 add_definitions(-DVERSION="${VERSION}")
